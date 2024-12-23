@@ -1,3 +1,5 @@
+version: "3.3"
+
 services:
   db:
     build:
@@ -7,8 +9,6 @@ services:
       - 3308:3306
     security_opt:
       - apparmor:unconfined
-    volumes:
-      - my_sql:/var/lib/mysql
     networks:
       - container_network
 
@@ -47,10 +47,3 @@ networks:
 
 volumes:
   my_sql:
-    name: my_sql_data
-  
-  
-  
-  
-
-    
